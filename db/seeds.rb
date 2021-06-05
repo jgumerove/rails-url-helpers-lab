@@ -5,3 +5,10 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+20.times do
+    first_name = Faker::Name.first_name
+    last_name = Faker::Name.last_name
+    Student.create(first_name: first_name, last_name: last_name)
+    puts "Create #{first_name} #{last_name}"
+end
